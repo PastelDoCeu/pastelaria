@@ -1,0 +1,55 @@
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font: inherit;
+    vertical-align: baseline;
+    background: none;
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    line-height: 1;
+    background: #fff;
+    color: #000;  
+    background: #aee4ff;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+input, textarea, select, button {
+    font: inherit;
+    color: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

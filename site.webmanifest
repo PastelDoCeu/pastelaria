@@ -3,8 +3,8 @@
   "short_name": "Pastel Do Céu",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#aee4ff",
-  "theme_color": "#aee4ff",
+  "background_color": "#F7D77A",
+  "theme_color": "#F7D77A",
   "icons": [
     {
       "src": "/favicon-192x192.png",

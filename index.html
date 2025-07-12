@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- Meta theme-color para Chrome, Edge, Opera, Android -->
-    <meta name="theme-color" content="#aee4ff">
+    <meta name="theme-color" content="#F7D77A">
     <!-- Meta para iOS Safari (cor da barra superior) -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!-- Meta para Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#aee4ff">
+    <meta name="msapplication-navbutton-color" content="#F7D77A">
     <!-- Favicon para navegadores modernos -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -20,63 +21,48 @@
     <!-- Manifest para PWA e Android -->
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="assets/css/default.css">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <title>Pastel Do Céu - Cardápio</title>
+    <link rel="stylesheet" href="assets/css/componentes.css">
+
+   
+    <title>Pastel do Céu - Cardápio</title>
 </head>
 <body>
-    
 
-    <header>
-        <div class="logo">
-            <img src="android-chrome-512x512.png" alt=""
-            style="width: 80px; height: 80px; position: fixed; top: 1.5rem; left: 1.5rem;">
+    <!--  Banner de informações sobre o estabelecimento  -->
+    <div class="banner-infos">
+        <img src="./assets/images/logo.png" alt="logotipo pastelaria pastel do ceu">
+        <div class="infos">
+            <span class="cabecalho">Funcionamento</span>
+            <span class="dias">QUARTA Á SEGUNDA</span>
+            <span class="horario">19:00 Ás 00:00 Hrs</span>
+            <span class="localizacao">
+                    Avenida Maria de Lurdes Costa da Mata, N° 216 - Cidade Jardim, Santa Cruz do Rio Pardo - SP
+                </span>
         </div>
-        
-        <div class="carrinho">
-            <input type="button" value="" class="carrinho-de-compras" onclick="mostrarCarrinho()">    
-            <span class="contador">01</span>
+    </div>
+
+    <!-- Area principal do app -->
+
+    <div class="principal">
+
+        <!-- Menu do site -->
+        <div class="menu">
+            <input type="radio" name="menu-opcoes" id="pasteis-salgados" checked>
+            <label for="pasteis-salgados">PASTÉIS SALGADOS</label>
+            <input type="radio" name="menu-opcoes" id="pasteis-doces">
+            <label for="pasteis-doces">PASTÉIS DOCES</label>
+            <input type="radio" name="menu-opcoes" id="bebidas">
+            <label for="bebidas">BEBIDAS</label>
         </div>
 
-    </header>
-    
-    <main>
-        <div class="cardapio">
-            <div class="menu-horizontal">
-                <ul class="lista-opcoes">
-                    <li>Cardápio</li>
-                    <li>Doces</li>
-                    <li>Salgados</li>
-                    <li>Combos</li>
-                    <li>Bebidas</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="items">
-
-            
-               
-            </div>
 
 
-        </div>
-    </main>
-    
+        <input type="button" value="Carrinho" class="carrinho" >
+
+    </div>
 
 
 
-
-
-
-
-
-    <script src="assets/script/generate-cards.js"></script>
-    <script>
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
-    .then(reg => console.log('Service Worker registrado', reg))
-    .catch(err => console.error('Erro ao registrar Service Worker', err));
-}
-</script>
+          
 </body>
 </html>

@@ -61,7 +61,7 @@ a {
        }
 
      }
-     @media (min-width:441px) {
+     @media (min-width:460px) {
 
        body {
         background: url(../images/background.png) no-repeat;

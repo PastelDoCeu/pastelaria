@@ -7,13 +7,16 @@
 
 
     .banner-infos {
-            height: 100px;
-            width: 310px;
+            height: 10vh;
+            min-height: 100px;
+            width: 70vw;
+            min-width: 300px;
+            max-width: 330px;
             background: #78BCE5;
             display: flex;
             flex-direction: row;
             position: fixed;
-            top:1%;
+            top:5vh;
             left: 50%;
             z-index: 6;
             transform: translate(-50%, -5%);
@@ -48,14 +51,18 @@
 
 
     .principal {
-        width: 380px;
-        height: 800px;
+        width: 95vw;
+        min-width: 350px;
+        max-width: 380px;
+        height: 85vh;
+        min-height: 700px;
         background: white;
         border-radius: 20px;
         position: fixed;
         left: 50%;
-        top: 60%;
-        transform: translate(-50%, -60%);
+        transform: translateX(-50%);
+        top: 10vh;
+      
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -68,7 +75,7 @@
             font-weight: 800;
             color: rgba(0,0,0,0.10);
             position: relative;
-            margin-top: 3vh;
+            margin-top: 5vh;
             font-size: 15px;
             white-space: nowrap;
             overflow-x: scroll;
@@ -108,7 +115,7 @@
             bottom: 10%;
         }
     
-        .cardapio {
+        .cardapio, .cardapio2, .cardapio3 {
             width: 360px;
             height: 550px;
             display: grid;
@@ -119,7 +126,18 @@
             overflow-y: scroll;
             scroll-behavior: smooth;
             scrollbar-width: none;
+            position: absolute;
+            left: 50%;
+            top: 15vh;
+            transform: translateX(-50%);
+            background: white;
         }
+           
+        .cardapio2, .cardapio3 {
+            visibility: hidden;
+        }
+
+    
         .card {
             width: 330px;
             height: 150px!important;
@@ -184,3 +202,4 @@
              .preco > .valor {
                 font-weight: 700;
              }
+

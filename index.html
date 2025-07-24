@@ -22,12 +22,9 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="assets/css/default.css">
     <link rel="stylesheet" href="assets/css/componentes.css">
-
-   
     <title>Pastel do Céu - Cardápio</title>
 </head>
 <body>
-
     <!--  Banner de informações sobre o estabelecimento  -->
     <div class="banner-infos">
         <img src="./assets/images/logo.png" alt="logotipo pastelaria pastel do ceu">
@@ -40,11 +37,13 @@
                 </span>
         </div>
     </div>
-
     <!-- Area principal do app -->
-
     <div class="principal">
-
+        <!-- Carrinho de compras e frases para incentivar a compra.-->
+        <div class="sub_menu">
+          <span id="frase">Olá, o que deseja hoje ?</span>   
+          <input type="button" value="" id="carrinho_de_compras">
+        </div>
         <!-- Menu do site -->
         <div class="menu">
             <input type="radio" name="menu-opcoes" id="pasteis-salgados" value="salgados" checked>
@@ -54,21 +53,51 @@
             <input type="radio" name="menu-opcoes" id="bebidas" value="bebida">
             <label for="bebidas">BEBIDAS</label>
         </div>
-
         <div class="cardapio" id="salgados"></div>
         <div class="cardapio2" id="doces"></div>
         <div class="cardapio3" id="bebida"></div>
-
+    </div>
+    <div class="cadastro_endereco">
+        <h1>Informações de Entrega</h1>
+        <form action="" class="formulario_endereco">
+            <div class="input-form-label">    <input type="text" name="usuario_nome" id="usuario_nome" class="input-form"></div>
+            <div class="input-form-label"> <input type="text" name="usuario_endereco" id="usuario_endereco" class="input-form"></div>
+            <div class="input-form-label">  <input type="text" name="usuario_bairro" id="usuario_bairro" class="input-form"> </div>
+            <div class="input-form-label"> <input type="number" name="usuario_numero" id="usuario_numero" class="input-form"></div>
+            <div class="input-form-label">  <input type="text" name="usuario_complemento" id="usuario_complemento" class="input-form"></div>
+        </form>
+        <div class="salvar_informacoes">
+            <input type="checkbox" name="usuario_salvar" id="usuario_salvar">
+            <label for="usuario_salvar">Ultilizar nas próximas compras ?</label>
         </div>
+        <input type="button" value="Salvar Informações" class="salvar-informacoes" id="salvar-informacoes"> 
+    </div>
+    <div class="finalizar">
 
+        <h1>Finalizar pedido</h1>
+        <table id="tabela-pedido">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Qtd</th>
+                    <th>Preço</th>
+               </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
 
-        <input type="button" value="Carrinho" class="carrinho" >
+       
+        <input type="button" value="Finalizar pedido" class="finalizar-pedido" id="finalizar-pedido">
 
     </div>
-
+ 
+    
     <script type="module" src="./assets/script/dinamica-cards.js"></script>
     <script type="module" src="./assets/script/bancodedados.js"></script>
-
+    <script type="module" src="./assets/script/carrinho-de-compras.js"></script>
+    <script type="module" src="./assets/script/renderizar-pedido.js"></script>
           
 </body>
 </html>

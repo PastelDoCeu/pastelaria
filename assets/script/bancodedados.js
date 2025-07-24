@@ -239,3 +239,6 @@ export var produtos = [
     img: ""
   }
 ];
+
+
+window.produtos = produtos
